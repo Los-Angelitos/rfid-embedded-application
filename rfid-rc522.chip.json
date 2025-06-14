@@ -1,0 +1,14 @@
+{
+  "name": "rfid-rc522",
+  "author": "Sweet Manager",
+  "pins": [
+    "SCK",
+    "MISO",
+    "MOSI",
+    "CS",
+    "GND",
+    "VCC",
+    "RST",
+    "IRQ"
+  ]
+}

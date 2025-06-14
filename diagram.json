@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "Sweet Manager",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 67.2, "left": 4.84, "attrs": {} },
+    { "type": "chip-rfid-rc522", "id": "chip1", "top": -104.58, "left": 148.8, "attrs": {} },
+    { "type": "wokwi-servo", "id": "lock", "top": -69.2, "left": -76.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:23", "chip1:MOSI", "green", [] ],
+    [ "esp:19", "chip1:MISO", "blue", [] ],
+    [ "esp:18", "chip1:SCK", "yellow", [] ],
+    [ "esp:5", "chip1:CS", "orange", [] ],
+    [ "esp:GND.2", "chip1:GND", "black", [] ],
+    [ "esp:3V3", "chip1:VCC", "red", [] ],
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "lock:V+", "esp:3V3", "cyan", [ "h-19.2", "v172.8" ] ],
+    [ "esp:D14", "lock:PWM", "orange", [ "h-14.24", "v72.78" ] ],
+    [ "lock:GND", "esp:GND.1", "black", [ "h-57.6", "v230.4" ] ],
+    [ "lock:PWM", "esp:D2", "purple", [ "v105.8", "h86.25" ] ]
+  ],
+  "dependencies": {}
+}
