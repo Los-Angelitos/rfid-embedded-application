@@ -5,7 +5,7 @@
   "parts": [
     { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 67.2, "left": 4.84, "attrs": {} },
     { "type": "chip-rfid-rc522", "id": "chip1", "top": -104.58, "left": 148.8, "attrs": {} },
-    { "type": "wokwi-servo", "id": "lock", "top": -69.2, "left": -76.8, "attrs": {} }
+    { "type": "wokwi-servo", "id": "lock", "top": -78.8, "left": -76.8, "attrs": {} }
   ],
   "connections": [
     [ "esp:23", "chip1:MOSI", "green", [] ],
@@ -16,10 +16,9 @@
     [ "esp:3V3", "chip1:VCC", "red", [] ],
     [ "esp:TX", "$serialMonitor:RX", "", [] ],
     [ "esp:RX", "$serialMonitor:TX", "", [] ],
-    [ "lock:V+", "esp:3V3", "cyan", [ "h-19.2", "v172.8" ] ],
-    [ "esp:D14", "lock:PWM", "orange", [ "h-14.24", "v72.78" ] ],
+    [ "lock:V+", "esp:3V3", "cyan", [ "h-28.8", "v115.3" ] ],
     [ "lock:GND", "esp:GND.1", "black", [ "h-57.6", "v230.4" ] ],
-    [ "lock:PWM", "esp:D2", "purple", [ "v105.8", "h86.25" ] ]
+    [ "lock:PWM", "esp:14", "purple", [ "h-96", "v249.8" ] ]
   ],
   "dependencies": {}
 }
